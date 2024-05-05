@@ -1,0 +1,236 @@
+body{
+    font-family: Segoe UI Light;
+    background-color: #0D0D0D;
+    overflow: hidden;
+}
+i{
+  cursor: pointer;
+}
+#back-to-top a{
+  color: white;
+}
+#back-to-top{
+  position: fixed;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  right: 25px;
+  bottom: 20px;
+  cursor: pointer;
+  display: none;
+}
+/* nav */
+.side-nav-menu{
+    z-index: 999;
+}
+
+.side-nav-menu ul li{
+    font-weight: 500;
+    color: #f9f6f6;
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.7s all;
+}
+.side-nav-menu ul li:hover{
+  color: #ff655c;
+}
+.nav-tab{
+    background-color: #000;
+    color: white;
+}
+.side-nav-menu img{
+    width: 30px;
+}
+
+/* end of nav */
+/* home */
+
+#hero .row .item{
+  width: 90%;
+}
+#hero .row .item img{
+transition: all 0.5s ease-in-out;
+}
+#hero .row .item:hover img{
+  filter: blur(3px);
+  transform: rotate(5deg)scale(1.25);
+}
+#hero .layer{
+  top: 0;
+  opacity: 0;
+  transition: all 0.5s 0.3s;
+}
+
+#hero .layer:hover{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#hero .layer h2{
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+}
+#hero .layer:hover h2{
+  animation: fadeInDown 0.5s ease-in-out 0.3s;
+}
+@keyframes fadeInDown {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+to {
+  opacity: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+}
+
+#hero .layer:hover .up{
+  animation: fadeInUp 0.5s ease-in-out 0.3s;
+}
+@keyframes fadeInUp {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+to {
+  opacity: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}}
+
+#hero .layer .circle{
+  border: 2px solid green;
+  width: 40px;
+  height: 40px;
+}
+#hero .layer:hover .flipInX{
+  animation: flipInX 1s ease-in-out 0.3s ;
+}
+
+@keyframes flipInX {
+  0% {
+  -webkit-transform: perspective(400px) rotateX(90deg);
+  transform: perspective(400px) rotateX(90deg);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  opacity: 0;
+}
+40% {
+  -webkit-transform: perspective(400px) rotateX(-20deg);
+  transform: perspective(400px) rotateX(-20deg);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+60% {
+  -webkit-transform: perspective(400px) rotateX(10deg);
+  transform: perspective(400px) rotateX(10deg);
+  opacity: 1;
+}
+80% {
+  -webkit-transform: perspective(400px) rotateX(-5deg);
+  transform: perspective(400px) rotateX(-5deg);
+}
+100% {
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+}
+
+}
+#hero .layer:not(:hover) .animate__slideOutLeft {
+  
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideOutRight {
+  0% {
+  transform: translateZ(0);
+}
+to {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+}}
+/* loader */
+.loading
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+  /* contact */
+  #contactHead .form-control{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    border-color: #CED4DA;
+    color: #fff;
+}
+#contactHead .form-control::placeholder{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #575757;
+}
+.form-btn
+{
+    background-color: #000 ;
+    color: #fff;
+    padding: 10px 25px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+.form-btn:hover
+{
+    color: #000!important;
+    background-color: #F8F6F6;
+  }
+
+  .error{
+    animation: fadeInDown 0.5s ease-in-out 0.3s;
+  }
+  @keyframes fadeInDown {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  }
