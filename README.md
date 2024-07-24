@@ -12,7 +12,7 @@ Navigation: Use the navigation menu or tabs to switch between different categori
 Movie Details: Click on a movie card to view detailed information such as synopsis, release date, and rating.
 Rate Movies: Users can rate movies based on their preferences.
 ## Live Demo
-Check out the live demo of the Movie App here.
+[Click Here to View Live Demo](https://abubakryosry.github.io/Movie/)
 ## Technologies Used
 HTML
 CSS
